@@ -1,0 +1,112 @@
+.hobby-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* responsive equal width */
+    gap: 30px;
+    margin-top: 20px;
+    justify-items: stretch;  /* make all items take full column width */
+}
+
+.hobby-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #1f242d;       /* card background */
+    border-radius: 15px;
+    padding: 20px;             /* equal space inside */
+    box-shadow: 0 0 15px rgba(124, 240, 61, 0.3);
+    min-height: 350px;         /* make all cards tall enough */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.hobby-img {
+    width: 100%;
+    max-width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    transition: transform 0.5s;
+}
+
+.hobby-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.hobby-img:hover img {
+    transform: scale(1.1);
+}
+
+.hobby-item p {
+    margin-top: 10px;
+    flex-grow: 1;  /* allows paragraph to expand but card keeps same width */
+    text-align: center;
+}
+
+
+.hobby-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hobby-heading h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(270deg, #ff6b6b, #f7d794, #1dd1a1, #54a0ff);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 6s ease infinite;
+  position: relative;
+  
+}
+
+.hobby-heading h1::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  margin: 14px auto 0;
+  background: linear-gradient(90deg, #ff6b6b, #1dd1a1);
+  border-radius: 2px;
+  box-shadow: 0 0 12px rgba(29, 209, 161, 0.7);
+}
+
+.hobby-heading h3 {
+  font-size: 1.5rem;
+  color: #a19393;
+  margin-top: 15px;
+  font-style: italic;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (max-width: 900px) {
+    .hobby-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hobby-list {
+        grid-template-columns: 1fr;
+    }
+}
+

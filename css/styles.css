@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #1f242d;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0px;
+    color: #fff;
+
+}
+
+main {
+    padding-top: 60px;
+    padding-bottom: 160px;
+    text-align: left;
+}
+
+
+footer {
+    position: fixed;       
+    bottom: 0;             
+    left: 0;              
+    width: 100%;          
+    background: #1f242d;   
+    color: #fff;
+    padding: 15px 9%;      
+    z-index: 1000;
+    text-align: centre;
+        
+}
+
+footer p {
+    margin: 4px 0;         
+    text-align: center;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar{
+    position: fixed;
+    left: 0;
+    top: 0; 
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    background: #1f242d;
+}
+
+.navbar .logo{
+    font-size: 20px;
+    font-weight: 700;  
+}
+
+.navbar ul{
+    display: flex;
+
+}
+
+.navbar ul li{
+    list-style: none;
+    margin-left: 35px;
+}
+
+.navbar ul li a{
+    font-size: 20px;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.navbar ul li:hover a,
+.navbar ul li.active a{
+    color: #7cf03d;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none; /* hidden on desktop */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    border-radius: 3px;
+}
+
+
+footer .btn-sci {
+    justify-content: center;  
+    display: flex;
+    margin-top: 10px;
+}
+
+ .btn-sci{
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    background: #7cf03d;
+    border: 2px solid #7cf03d;
+    box-shadow: 0 0 10px #7cf03d; 
+    font-size: 16px;
+    color: #1f242d;
+    font-weight: 600;
+    transition: .5;
+}
+
+.btn:hover{
+    background: transparent;
+    color: #7cf03d;
+    box-shadow: none;
+}
+
+.btn-sci .sci {
+    margin-left: 20px;
+}
+
+.btn-sci .sci a{
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid #7cf03d;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #7cf03d;
+    margin: 0 8px;
+    transition: .5s;
+}
+
+.btn-sci .sci a:hover{
+    background: #7cf03d;
+    color: #1f242d;
+    box-shadow: 0 0 10px #7cf03d;
+
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        display: none; /* hide menu initially */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 10%;
+        background: #1f242d;
+        width: 200px;
+        border-radius: 10px;
+        padding: 20px;
+        z-index: 999;
+    }
+
+    .navbar ul li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: flex; /* show hamburger icon */
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+     .content-wrapper {
+        flex-direction: column;  /* stack items */
+        align-items: center;     /* center them */
+    }
+
+    .sidebar {
+        width: 100%;             /* take full width */
+        margin-bottom: 20px;
+    }
+
+    .main-sections {
+        width: 100%;             /* content full width */
+    }
+}
+
+
+
