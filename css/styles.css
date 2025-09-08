@@ -96,24 +96,26 @@ a{
     border-radius: 3px;
 }
 
+
 /* top heading css for all pages*/
 .colorful-heading {
   text-align: center;
   margin-bottom: 50px;
 }
 
- h1 {
+.colorful-heading h1 {
   font-size: 3rem;
   font-weight: bold;
   background: linear-gradient(270deg, #ff6b6b, #f7d794, #1dd1a1, #54a0ff);
   background-size: 600% 600%;
-
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   animation: gradientFlow 6s ease infinite;
   position: relative;
   
 }
 
- h1::after {
+.colorful-heading h1::after {
   content: "";
   display: block;
   width: 120px;
@@ -124,7 +126,7 @@ a{
   box-shadow: 0 0 12px rgba(29, 209, 161, 0.7);
 }
 
- h3 {
+.colorful-heading h3 {
   font-size: 1.5rem;
   color: #a19393;
   margin-top: 15px;
