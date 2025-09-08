@@ -99,25 +99,7 @@
     margin-bottom: 10px;
 }
 
-/* Buttons */
-.about-text-full .btn {
-    display: inline-block;
-    padding: 8px 20px;
-    font-size: 16px;
-    font-weight: 500;
-    background: #7cf03d;
-    border: 2px solid #7cf03d;
-    color: #1f242d;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: 0.3s ease;
-}
 
-.about-text-full .btn:hover {
-    background: transparent;
-    color: #7cf03d;
-    box-shadow: 0 0 12px #7cf03d;
-}
 
 /* Animated heading for About section */
 .about-text-top h1 {
