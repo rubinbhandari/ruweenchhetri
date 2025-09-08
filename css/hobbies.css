@@ -47,12 +47,12 @@
     text-align: center;
 } 
 /* top heading css for all pages*/
-.colorful-heading {
+.hobbies-heading {
   text-align: center;
   margin-bottom: 50px;
 }
 
-.colorful-heading h1 {
+.hobbies-heading h1 {
   font-size: 3rem;
   font-weight: bold;
   background: linear-gradient(270deg, #ff6b6b, #f7d794, #1dd1a1, #54a0ff);
@@ -64,7 +64,7 @@
   
 }
 
-.colorful-heading h1::after {
+.hobbies-heading h1::after {
   content: "";
   display: block;
   width: 120px;
@@ -75,7 +75,7 @@
   box-shadow: 0 0 12px rgba(29, 209, 161, 0.7);
 }
 
-.colorful-heading h3 {
+.hobbies-heading h3 {
   font-size: 1.5rem;
   color: #a19393;
   margin-top: 15px;
